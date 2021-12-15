@@ -32,7 +32,7 @@ def stop_bot(message):
 @bot.message_handler(func = lambda message : message.text != '/stop',content_types='text')
 def send_activity_for_contact(message):
     global flag1
-    auto = whatsappAuto.whatsappAuto(message.text)
+    auto = whatsappAuto.WhatsappAuto(message.text)
     string,flag2=auto.enter_chat()
     bot.send_message(message.chat.id,string)
     try:
